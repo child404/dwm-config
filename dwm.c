@@ -268,6 +268,9 @@ static Drw *drw;
 static Monitor *mons, *selmon;
 static Window root, wmcheckwin;
 
+/* Allow using XF86 keys */
+#include "X11/XF86keysym.h"
+
 /* configuration, allows nested code to access above variables */
 #include "config.h"
 
