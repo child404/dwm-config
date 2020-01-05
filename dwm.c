@@ -268,10 +268,6 @@ static Drw *drw;
 static Monitor *mons, *selmon;
 static Window root, wmcheckwin;
 
-
-
-#include "movestack.c"
-
 /* configuration, allows nested code to access above variables */
 #include "config.h"
 
