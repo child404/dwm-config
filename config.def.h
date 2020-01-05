@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 7;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -31,6 +31,21 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
+/* Volume control keys */
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+
+/* Run surf key */
+static const char *runsurf[] = { "/home/vlodek/Tools/scripts/dwm/runsurf.sh", NULL };
+
+/* Run telegram key */
+static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
+
+/* Brightness control keys */
+static const char *brightup[]       = { "/home/vlodek/Tools/scripts/dwm/brightness.sh", "+", "eDP", "0.04", NULL};
+static const char *brightdown[]     = { "/home/vlodek/Tools/scripts/dwm/brightness.sh", "-", "eDP", "0.04", NULL};
+
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
@@ -44,7 +59,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -94,6 +109,13 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+        { 0,             XF86XK_AudioLowerVolume,  spawn, {.v = downvol } },
+        { 0,             XF86XK_AudioMute,         spawn, {.v = mutevol } },
+        { 0,             XF86XK_AudioRaiseVolume,  spawn, {.v = upvol   } },
+        { 0,             XF86XK_MonBrightnessUp,   spawn, {.v = brightup } },
+        { 0,             XF86XK_MonBrightnessDown, spawn, {.v = brightdown } },
+        {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runsurf }},  
+        {MODKEY|ShiftMask,              XK_t,      spawn, {.v = runtg }},  
 };
 
 /* button definitions */
