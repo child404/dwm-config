@@ -18,6 +18,10 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
+/* commands for screenshots */
+static const char *scrotcmd[]  = { "scrot", "-t", "25", NULL };
+static const char *scrotfocusedcmd[]  = { "scrot", "--focused", NULL };
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -75,6 +79,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+        { 0,                            XK_Print,  spawn,      {.v = scrotcmd } },
+        { ShiftMask,                    XK_Print,  spawn,      {.v = scrotfocusedcmd } },
+        { ControlMask,                  XK_Print,  spawn,      SHCMD("sleep 1s;scrot --select") },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
