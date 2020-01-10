@@ -20,6 +20,9 @@
  *
  * To understand everything else, start reading main().
  */
+/* Allow using XF86 keys */
+#include "X11/XF86keysym.h"
+
 #include <errno.h>
 #include <locale.h>
 #include <signal.h>
@@ -267,9 +270,6 @@ static Display *dpy;
 static Drw *drw;
 static Monitor *mons, *selmon;
 static Window root, wmcheckwin;
-
-/* Allow using XF86 keys */
-#include "X11/XF86keysym.h"
 
 /* configuration, allows nested code to access above variables */
 #include "config.h"
