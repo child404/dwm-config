@@ -37,14 +37,14 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
 /* Run surf key */
-static const char *runsurf[] = { "/home/vlodek/Tools/scripts/dwm/runsurf.sh", NULL };
+static const char *runsurf[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runsurf.sh", NULL };
 
 /* Run telegram key */
 static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
 
 /* Brightness control keys */
-static const char *brightup[]       = { "/home/vlodek/Tools/scripts/dwm/brightness.sh", "+", "eDP", "0.04", NULL};
-static const char *brightdown[]     = { "/home/vlodek/Tools/scripts/dwm/brightness.sh", "-", "eDP", "0.04", NULL};
+static const char *brightup[]       = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "+", "eDP", "0.04", NULL};
+static const char *brightdown[]     = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "-", "eDP", "0.04", NULL};
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
