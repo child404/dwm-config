@@ -46,6 +46,9 @@ static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
 static const char *brightup[]       = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "+", "eDP", "0.04", NULL};
 static const char *brightdown[]     = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "-", "eDP", "0.04", NULL};
 
+/* Run vifm */
+static const char *runvifm[] = {"/usr/bin/vifm", NULL};
+
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
@@ -116,6 +119,7 @@ static Key keys[] = {
         { 0,             XF86XK_MonBrightnessDown, spawn, {.v = brightdown } },
         {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runsurf }},  
         {MODKEY|ShiftMask,              XK_t,      spawn, {.v = runtg }},  
+        {MODKEY,                        XK_v,      spawn, {.v = runvifm }},
 };
 
 /* button definitions */
