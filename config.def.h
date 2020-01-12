@@ -119,7 +119,7 @@ static Key keys[] = {
         { 0,             XF86XK_MonBrightnessDown, spawn, {.v = brightdown } },
         {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runsurf }},  
         {MODKEY|ShiftMask,              XK_t,      spawn, {.v = runtg }},  
-        {MODKEY,                        XK_v,      spawn, {.v = runvifm }},
+        {MODKEY|ShiftMask,              XK_z,      spawn, {.v = runvifm }},
 };
 
 /* button definitions */
