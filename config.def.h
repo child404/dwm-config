@@ -47,9 +47,6 @@ static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
 static const char *brightup[]       = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "+", "eDP", "0.04", NULL};
 static const char *brightdown[]     = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/brightness.sh", "-", "eDP", "0.04", NULL};
 
-/* Run vifm */
-static const char *runvifm[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runvifm.sh", NULL};
-
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
