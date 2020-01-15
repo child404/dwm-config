@@ -37,7 +37,7 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
 /* Run surf key */
-static const char *runsurf[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runsurf.sh", NULL };
+static const char *runqute[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runqute.sh", NULL };
 
 /* Run telegram key */
 static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
@@ -117,7 +117,7 @@ static Key keys[] = {
         { 0,             XF86XK_AudioRaiseVolume,  spawn, {.v = upvol   } },
         { 0,             XF86XK_MonBrightnessUp,   spawn, {.v = brightup } },
         { 0,             XF86XK_MonBrightnessDown, spawn, {.v = brightdown } },
-        {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runsurf }},  
+        {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runqute }},  
         {MODKEY|ShiftMask,              XK_t,      spawn, {.v = runtg }},  
         {MODKEY|ShiftMask,              XK_z,      spawn, {.v = runvifm }},
 };
