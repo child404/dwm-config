@@ -38,6 +38,7 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 
 /* Run surf key */
 static const char *runqute[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runqute.sh", NULL };
+static const char *runqutevideo[] = { "/home/vlodek/.config/dotfiles/suckless/dwm_scripts/runqutevideo.sh", NULL };
 
 /* Run telegram key */
 static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
@@ -119,7 +120,7 @@ static Key keys[] = {
         { 0,             XF86XK_MonBrightnessDown, spawn, {.v = brightdown } },
         {MODKEY|ShiftMask,              XK_b,      spawn, {.v = runqute }},  
         {MODKEY|ShiftMask,              XK_t,      spawn, {.v = runtg }},  
-        {MODKEY|ShiftMask,              XK_z,      spawn, {.v = runvifm }},
+        {MODKEY|ShiftMask,              XK_z,      spawn, {.v = runqutevideo }},
 };
 
 /* button definitions */
