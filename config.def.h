@@ -37,7 +37,7 @@ static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%"
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 
 /* Run surf key */
-static const char *runqute[] = { "/usr/local/bin/qutebrowser", NULL };
+static const char *runqute[] = { "qutebrowser", NULL };
 
 /* Run telegram key */
 static const char *runtg[]   = { "/home/vlodek/Tools/Telegram/Telegram", NULL };
